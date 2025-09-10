@@ -1,0 +1,7 @@
+.Rhistory
+.Rproj.user
+
+/presentation_files/
+*.html
+
+/.quarto/

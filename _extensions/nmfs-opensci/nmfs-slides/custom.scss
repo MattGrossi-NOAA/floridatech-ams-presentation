@@ -108,7 +108,8 @@ $light-bg-text-color: $brand-dark-navy;
     background-image: url("/styles/divider-swoop.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: right;
+    // background-position: right;
+    background-position: bottom;
 }
 
 body:has(.content-swoop, .content-swoop-teal, .content-swoop-navy, .content-double-swoop, .divider) {
