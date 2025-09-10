@@ -17,92 +17,228 @@ format:
     transition-speed: default
     background-transition: none
     scrollable: true
+    css: styles.css
+from: markdown+emoji
 ---
 
-## Game Plan {.content-double-swoop}
+<!-- ## Game Plan {.content-double-swoop} -->
 
-- Who am I?
+<!-- - Who am I? -->
 
-- What is the Southeast Fisheries Science Center?
+<!-- - What is the Southeast Fisheries Science Center? -->
 
-- AI/ML at the SEFSC:
-  - Reef fish surveys
-  - Menhaden ageing
-  - Red Snapper ageing
-  - Detection from drones
+<!-- - AI/ML at the SEFSC: -->
 
-- Fish(eries) in the clouds?
+<!-- ::: {.container .smaller} -->
+<!-- :::: {.col} -->
+<!-- &nbsp;&nbsp;&nbsp; \> Menhaden ageing   -->
+<!-- &nbsp;&nbsp;&nbsp; \> Red Snapper ageing   -->
+<!-- :::: -->
 
-- A word on automations
+<!-- :::: {.col} -->
+<!-- \> Reef fish surveys   -->
+<!-- \> Detection from drones -->
+<!-- :::: -->
+<!-- ::: -->
 
-- Final remarks
+<!-- - Fish(eries) in the clouds? -->
 
-# Who am I? {.divider}
+<!-- - A word on automations -->
 
-## Meet Matt {.content-double-swoop auto-animate="true"}
+<!-- - Final remarks -->
 
-<br>
-`Physical oceanographer` by training.  
+<!-- # Who am I? {.divider} -->
 
-## Meet Matt {.content-double-swoop auto-animate="true"}
+<!-- ## {.content-double-swoop transition="none"} -->
 
-- **B.S** Physical Oceanography, Florida Tech
+<!-- <br> -->
+<!-- `Physical oceanographer` by training.   -->
 
-- **M.S.** Oceanography, University of Delaware
+<!-- ::: {.smaller layout-ncol=3} -->
+<!-- ![B.S. Oceanography (Physical) with Meteorology minor <br> **Florida Tech**](https://www.fit.edu/media/site-specific/header-images/panther-1.jpg){height=150} -->
 
-- **Ph.D.** Meteology and Physical Oceanography, University of Miami
+<!-- ![M.S. Marine Studies (Oceanography) <br> **University of Delaware**](https://www.udel.edu/content/dam/udelImages/ceoe/photography/hero/ceoe_hero_lewescampus_2020.jpg){height=150} -->
 
-## Meet Matt {.content-double-swoop auto-animate="true"}
+<!-- ![Ph.D. Meteorology and Physical Oceanography <br> **University of Miami**](https://mps.earth.miami.edu/_assets/images/1240x550/rsmas-aerial-pool-1240x550.jpg){height=150} -->
+<!-- ::: -->
 
-<br>
-`Physical oceanographer` by training.  
-<br>
-`Observational oceanographer` by practice.  
+<!-- ## {.content-double-swoop transition="none"} -->
 
-## Meet Matt {.content-double-swoop auto-animate="true"}
+<!-- <br> -->
+<!-- `Physical oceanographer` by training.   -->
 
-<br>
-`Physical oceanographer` by training.  
-<br>
-`Observational oceanographer` by practice.  
-<br>
-`Applied machine learning researcher` and `data scientist` by happenstance.
+<!-- <br> -->
+<!-- `Observational oceanographer` by practice.   -->
 
-## YAML keys {.content-double-swoop auto-animate="true"}
+<!-- ::: {.smaller layout-ncol=4} -->
+<!-- ![Research Cruises](https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/full_width/public/thumbnails/image/rvSharp.jpg){height=170} -->
 
-``` {.yaml code-line-numbers="3-4"}
-title: NOAA Fisheries revealjs Presentation Template
-subtitle: Using quarto to build a branded slide presentation
-author: John Doe 
-institute: NMFS Open Science
+<!-- ![Gliders](https://www.whoi.edu/wp-content/uploads/2019/01/slocum_en_42909.jpg){height=170} -->
+
+<!-- ![HF Radar](https://www.cencoos.org/wp-content/uploads/2020/04/Bodega_HFR_recieve_antenna_Fredphoto2-2048x1371.jpg){height=170} -->
+
+<!-- ![Drifters](https://assets.spe.org/dims4/default/94394cb/2147483647/strip/true/crop/468x269+0+0/resize/800x460!/quality/90/?url=http%3A%2F%2Fspe-brightspot.s3.us-east-2.amazonaws.com%2F54%2F40%2F76f61b77e3d3ea24d4e490afc71d%2Fcarthe-drifter.jpg){height=170} -->
+
+<!-- ::: -->
+
+
+<!-- ## {.content-double-swoop transition="none"} -->
+
+<!-- <br> -->
+<!-- `Physical oceanographer` by training.   -->
+
+<!-- <br> -->
+<!-- `Observational oceanographer` by practice.   -->
+
+<!-- <br> -->
+<!-- `Applied machine learning researcher` and `data scientist` by happenstance. -->
+
+
+<!-- ## {.content-double-swoop transition="none"} -->
+
+<!-- <br> -->
+<!-- [`Physical oceanographer` by training.]{.semi-transparent}   -->
+
+<!-- <br> -->
+<!-- [`Observational oceanographer` by practice.]{.semi-transparent}   -->
+
+<!-- <br> -->
+<!-- `Applied machine learning researcher` and `data scientist` by happenstance. -->
+
+
+<!-- ## {.content-double-swoop auto-animate="true} -->
+
+<!-- The NOAA **Southeast Fisheries Science Center** (SEFSC) provides the scientific advice and data needed to effectively manage the living marine resources of the Southeast region and Atlantic high seas. -->
+
+<!-- :::: columns -->
+<!-- ::: {.column width="60%"} -->
+<!-- ![](images/sefsc_map_500x500.png) -->
+<!-- ::: -->
+
+<!-- :::: {.column .smallest width="40%"} -->
+<!-- ::: {.colored-box style="--background-color:#C6E6F0"} -->
+<!-- ::: {.centered} -->
+<!-- **Mission Areas** -->
+<!-- ::: -->
+
+<!-- :fish: Sustainable Fisheries   -->
+<!-- :tropical_fish: Population and Ecosystems Monitoring   -->
+<!-- :computer: Operations, Management, and Information   -->
+<!-- :turtle: Marine Mammals and Sea Turtles     -->
+<!-- :chart_with_upwards_trend: Fisheries Statistics   -->
+<!-- :camera: Fisheries Assessment, Technology, and Engineering Support   -->
+
+<!-- ::: -->
+<!-- :::: -->
+<!-- ::::: -->
+
+<!-- # Artificial Intelligence (AI) and Machine Learning (ML) at the Southeast Fisheries Science Center {.divider} -->
+
+<!-- ## Fish Ageing {.content-double-swoop auto-animate="true"} -->
+
+<!-- ::: {.fragment} -->
+<!-- But first, why age a fish? Who cares?   -->
+<!-- ::: -->
+
+<!-- <br> -->
+
+<!-- ::: {.fragment} -->
+<!-- :fish: **Fish age** is combined with **length measurements** to estimate **growth rates.**   -->
+<!-- ::: -->
+
+<!-- <br> -->
+
+<!-- ::: {.fragment} -->
+<!-- Knowing fish age enables us to: -->
+
+<!-- ::: {.small} -->
+<!-- * Estimate fish mortality rate from year to year -->
+<!-- * Determine reproductive maturity of the fish -->
+<!-- * Monitor changes in stock population over time -->
+<!-- ::: -->
+<!-- ::: -->
+
+
+<!-- ## Fish Ageing {.content-double-swoop auto-animate="true"} -->
+
+<!-- :::: {.columns} -->
+<!-- ::: {.column} -->
+<!-- ![Catching all fish is impractical...](./images/red-snapper-school.png) -->
+<!-- ::: -->
+
+<!-- ::: {.column .fragment} -->
+<!-- ![...so we subsample...](./images/red-snapper-subset.png) -->
+<!-- ::: -->
+<!-- :::: -->
+
+<!-- ## Fish Ageing {.content-double-swoop auto-animate="true"} -->
+
+<!-- ::: {.centered} -->
+<!-- ![...and calculate relative abundances for each age.](./images/fake-age-histogram.png){width=80%} -->
+<!-- ::: -->
+
+<!-- ## Red Snapper Ageing {.content-double-swoop auto-animate="true"} -->
+
+<!-- ![](images/otoliths.jpg) -->
+
+
+<!-- ## Red Snapper Ageing {.content-double-swoop auto-animate="true"} -->
+
+<!-- ::: {.centered} -->
+
+<!-- ![](images/otolith-redsnapper.jpg) -->
+
+
+<!-- ![](images/otolith-agemarks.jpg){.fragment} -->
+
+<!-- ::: -->
+
+<!-- ## Red Snapper Ageing {.content-double-swoop auto-animate="true"} -->
+
+<!-- ![](images/otolith-ageing-current-workflow.jpg){width=90%} -->
+
+<!-- ::: {.fragment .small} -->
+<!-- :date: **50-70 days (10-15 weeks)** of human hours to age 1000 otoliths, not including prep.   -->
+<!-- ::: -->
+
+<!-- ::: {.fragment .small} -->
+<!-- :dizzy_face: But we receive thousands of samples every year! **Is there a better way?** -->
+<!-- ::: -->
+
+## Red Snapper Ageing {.content-double-swoop auto-animate="true"}
+
+#### Can we use spectrometry to reliably estimate age?
+
+![](images/spectra-by-age.jpg)
+
+## Red Snapper Ageing {.content-double-swoop auto-animate="true"}
+
+```{mermaid}
+flowchart LR
+  A[<img src="images/otolith-tray.png"> Otolith samples] --> B(<img src="images/spectrometer.png"> Spectrometer)
+  A --> C(<img src="images/microscope.png"> Microscope)
+  B --> D[<img src="images/spectra-plot.png"> FT-NIR spectral data]
+  C --> E[<img src="images/spreadsheet.png"> Manual ages]
+  D --> F{Trained<br>model}
+  E --> F
 ```
 
-`author` and `institute`: can add multiples on same line or on tabbed new lines
+::: {.fragment}
 
-## YAML keys {.content-double-swoop auto-animate="true"}
+---
 
-``` {.yaml code-line-numbers="5"}
-title: NOAA Fisheries revealjs Presentation Template
-subtitle: Using quarto to build a branded slide presentation
-author: John Doe 
-institute: NMFS Open Science
-date: last-modified
+### New Method
+
+```{mermaid}
+flowchart LR
+  A[<img src="images/otolith-tray.png"> New otolith samples] --> B(<img src="images/spectrometer.png"> Spectrometer)
+  B --> C[<img src="images/spectra-plot.png"> FT-NIR spectral data]
+  C --> D{Trained<br>model}
+  D --> E(<img src="images/fake-age-histogram.png"> Ages provided<br>to end users)
 ```
 
-`date`: `last-modified`, `today`, or a date in the format MM-DD-YYYY
-
-## YAML keys {.content-double-swoop auto-animate="true"}
-
-``` {.yaml code-line-numbers="6"}
-title: NOAA Fisheries revealjs Presentation Template
-subtitle: Using quarto to build a branded slide presentation
-author: John Doe 
-institute: NMFS Open Science
-date: last-modified
-brand: slides-light-brand.yml
-```
-
-`brand`: file for NOAA branding metadata
+:::
+<br>
 
 ## YAML keys {.content-double-swoop auto-animate="true"}
 
