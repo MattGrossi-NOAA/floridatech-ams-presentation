@@ -1,7 +1,7 @@
 ---
-title: Data e-fish-iency at the Southeast Fisheries Science Center
-subtitle: Implementing AI/ML, cloud, and automated workflows
-author: Matt Grossi
+title: "From physical oceanography to NOAA Fisheries:"
+subtitle:  Supporting data e-fish-iency at the Southeast Fisheries Science Center
+author: Dr. Matt Grossi
 institute: Data Scientist, SEFSC
 date: last-modified
 brand: slides-light-brand.yml
@@ -15,204 +15,270 @@ format:
     navigation-mode: linear
     transition: slide
     transition-speed: default
-    background-transition: none
+    background-transition: fade
     scrollable: true
     css: styles.css
 from: markdown+emoji
 ---
 
-<!-- ## Game Plan {.content-double-swoop} -->
+## {.content-swoop data-menu-title="Stick fish"}
 
-<!-- - Who am I? -->
+![](images/stick-fish.jpg){fig-alt="Overly simple fish drawing"}
 
-<!-- - What is the Southeast Fisheries Science Center? -->
+::: {.notes}
+...which turns out to be completely rubbish for learning anything! It's like trying identify a person from a stick figure drawing. Nowadays I'm sure you all can just take pictures with your phones, which hopefully would have helped me out, but instead I concluded I was too lousy of an artist to be a biologist of any kind and wanted nothing to do with biology.
 
-<!-- - AI/ML at the SEFSC: -->
+But before I go any further :next_track_button:
+:::
 
-<!-- ::: {.container .smaller} -->
-<!-- :::: {.col} -->
-<!-- &nbsp;&nbsp;&nbsp; \> Menhaden ageing   -->
-<!-- &nbsp;&nbsp;&nbsp; \> Red Snapper ageing   -->
-<!-- :::: -->
+<!-- ---------------------------------------------------------------------- -->
 
-<!-- :::: {.col} -->
-<!-- \> Reef fish surveys   -->
-<!-- \> Detection from drones -->
-<!-- :::: -->
-<!-- ::: -->
+## {.content-swoop transition="fade-out" data-menu-title="Float Plan"}
 
-<!-- - Fish(eries) in the clouds? -->
+### Float Plan
 
-<!-- - A word on automations -->
+:::: {.columns}
+::: {.column width=40%}
+- How I got here
+- What I do
+- How you can, too (Government Jobs 1000)
+:::
+::: {.column width=60% .smaller .dark-box color=white .centered}
 
-<!-- - Final remarks -->
+**MEET MATT**
 
-<!-- # Who am I? {.divider} -->
+:ocean:  
 
-<!-- ## {.content-double-swoop transition="none"} -->
+[**Physical oceanographer**]{style="color:#003087"} by training  
+  
+:satellite:  
 
-<!-- <br> -->
-<!-- `Physical oceanographer` by training.   -->
+[**Observational oceanographer**]{style="color:#003087"} by practice  
+  
+:chart_with_upwards_trend:  
 
-<!-- ::: {.smaller layout-ncol=3} -->
-<!-- ![B.S. Oceanography (Physical) with Meteorology minor <br> **Florida Tech**](https://www.fit.edu/media/site-specific/header-images/panther-1.jpg){height=150} -->
+[**Applied machine learning researcher**]{style="color:#003087"} and [**data scientist**]{style="color:#003087"} by happenstance
 
-<!-- ![M.S. Marine Studies (Oceanography) <br> **University of Delaware**](https://www.udel.edu/content/dam/udelImages/ceoe/photography/hero/ceoe_hero_lewescampus_2020.jpg){height=150} -->
+:::
+::::
 
-<!-- ![Ph.D. Meteorology and Physical Oceanography <br> **University of Miami**](https://mps.earth.miami.edu/_assets/images/1240x550/rsmas-aerial-pool-1240x550.jpg){height=150} -->
-<!-- ::: -->
+::: {.notes}
+...the obligatory float plan for the evening: I've been asked to talk about my career as a civil servant with NOAA, what that looks like and how I got here. I've decided to do that from the perspective of an abbreviated career talk. I myself have always enjoyed learning about colleagues' career paths because, even to this day, I always find myself surprised and, frankly, inspired, by their stories. It's helpful to be reminded that scientists' careers are rarely linear and predictable. And finally, in case I successfully inspire one or more of you to consider a career in government, I'll end with some suggestions for how to make that dream become a reality. :next_track_button:
+:::
 
-<!-- ## {.content-double-swoop transition="none"} -->
+<!-- ---------------------------------------------------------------------- -->
 
-<!-- <br> -->
-<!-- `Physical oceanographer` by training.   -->
+## {.content-swoop data-menu-title="Hold slide"}
 
-<!-- <br> -->
-<!-- `Observational oceanographer` by practice.   -->
+::: {.notes}
+I'd like to start with a quote from my Master's advisor that really resonated with me and that I remember to this day.
+:::
 
-<!-- ::: {.smaller layout-ncol=4} -->
-<!-- ![Research Cruises](https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/full_width/public/thumbnails/image/rvSharp.jpg){height=170} -->
+## {background-image="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/full_width/public/thumbnails/image/rvSharp.jpg?itok=4Qxq9PgB" fig-alt="Photo of the R/V Hugh R. Sharp, courtesy of Jon Cox, University of Delaware" data-menu-title="UD | MS"}
 
-<!-- ![Gliders](https://www.whoi.edu/wp-content/uploads/2019/01/slocum_en_42909.jpg){height=170} -->
+::: {.smallest style="color: white;" .absolute bottom="5" right="0"}
+R/V *Hugh R. Sharp*. Photo credit: Jon Cox
+:::
 
-<!-- ![HF Radar](https://www.cencoos.org/wp-content/uploads/2020/04/Bodega_HFR_recieve_antenna_Fredphoto2-2048x1371.jpg){height=170} -->
+::: {.notes}
+A few months into my first year at the University of Delaware, my lab mate and I were figuring out how to balance our course work and thesis research while also going to sea for a week at a time every month to support another unrelated project my advisor had funded. Matt Oliver, our advisor, sat us down for a pep talk, as he did from time to time, and said to us :next_track_button::
+:::
 
-<!-- ![Drifters](https://assets.spe.org/dims4/default/94394cb/2147483647/strip/true/crop/468x269+0+0/resize/800x460!/quality/90/?url=http%3A%2F%2Fspe-brightspot.s3.us-east-2.amazonaws.com%2F54%2F40%2F76f61b77e3d3ea24d4e490afc71d%2Fcarthe-drifter.jpg){height=170} -->
+. . .
 
-<!-- ::: -->
+::: {.semi-transparent-box}
+[**"Courses don't get people jobs. Neither do theses nor dissertations. *Skills* get people jobs. And you never know what skill will land you your first job."**]{style="color:#00467F"}  
+[~Dr. Matthew Oliver]{style="float:right; color:#007078"} <br>
 
+[University of Delaware]{style="float:right; color:#007078"}
+:::
 
-<!-- ## {.content-double-swoop transition="none"} -->
+::: {.notes}
 
-<!-- <br> -->
-<!-- `Physical oceanographer` by training.   -->
+> Courses don’t get people jobs. And neither do degrees or theses or dissertations, for that matter. *Skills* get people jobs. The best thing you can do as a student is to start searching for jobs now, even though you still have time to go. Look for jobs that excite you, things that you’d like to do, and then see what skills they’re looking for. If there are things you don’t already know how to do, use the next year or so to learn it. Being in school is the best time to develop your skill toolbox! You never know what skill will land you your first job.
 
-<!-- <br> -->
-<!-- `Observational oceanographer` by practice.   -->
+These words of wisdom have really rung true in my career, so listen for them resonating throughout this evening. They also sparked a paradigm shift in how I approached the rest of my education. I had been thinking about working for NOAA since my time as an undergraduate, but I didn't know what that would look like or how to make it happen. I assumed that having the right degrees with the right classes would do the trick, but as it turns out Matt was right: skill building was key.
 
-<!-- <br> -->
-<!-- `Applied machine learning researcher` and `data scientist` by happenstance. -->
+I have to give credit where credit is due: Matt Oliver was a fantastic advisor and mentor who was always trying to set us up for success both during and after our time in his lab. In addition to the cruise experience, another opportunity I had as a Master's student was learning to operate :next_track_button:
+:::
 
+<!-- ---------------------------------------------------------------------- -->
 
-<!-- ## {.content-double-swoop transition="none"} -->
+## {background-iframe="https://www.youtube.com/embed/avXysAQ9iqc?start=5&mute=1&autoplay=1" background-interactive="true"  background-size="contain" data-menu-title="Gliders"}
 
-<!-- <br> -->
-<!-- [`Physical oceanographer` by training.]{.semi-transparent}   -->
+::: {.notes}
+Slocum gliders, which are low-powered buoyancy-driven autonomous underwater vehicles that can measure a host of physical, chemical, and biological properties in the ocean. Matt sent us to glider school to learn how to prep, deploy, pilot, and recover these instruments and arranged to have us test our skills in the Delaware Bay and eventually offshore. It was a lot of fun, but had nothing to do with my research project. As I was finishing up my Master's :next_track_button:
+:::
 
-<!-- <br> -->
-<!-- [`Observational oceanographer` by practice.]{.semi-transparent}   -->
+<!-- ---------------------------------------------------------------------- -->
 
-<!-- <br> -->
-<!-- `Applied machine learning researcher` and `data scientist` by happenstance. -->
+## {background-image="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Deepwater_Horizon_offshore_drilling_unit_on_fire_2010.jpg/1280px-Deepwater_Horizon_offshore_drilling_unit_on_fire_2010.jpg" background-color="black" background-size="contain" transition="fade-in fade-out" data-menu-title="Deepwater Horizon"}
 
+::: {.notes}
+...an oil rig called the Deepwater Horizon exploded in the northern Gulf of America :next_track_button:
+:::
 
-<!-- ## {.content-double-swoop auto-animate="true} -->
+<!-- ---------------------------------------------------------------------- -->
 
-<!-- The NOAA **Southeast Fisheries Science Center** (SEFSC) provides the scientific advice and data needed to effectively manage the living marine resources of the Southeast region and Atlantic high seas. -->
+## {background-image="https://www.nesdis.noaa.gov/s3/migrated/Deepwaterimagewithinset1.jpg" background-color="black" background-size="contain" data-menu-title="Oil spill from space"}
 
-<!-- :::: columns -->
-<!-- ::: {.column width="60%"} -->
-<!-- ![](images/sefsc_map_500x500.png) -->
-<!-- ::: -->
+::: {.notes}
+...and spilled millions of gallons of oil into the water over thirty-something days before it was finally contained. It was an environmentally devastating event to watch play out, but it was also paradoxically inspiring as a student to see the entire oceanographic community across the country spring into action to help out. This included in glider community, and so we prepped our glider and went on standby in case we were asked to bring it down to Louisiana.
 
-<!-- :::: {.column .smallest width="40%"} -->
-<!-- ::: {.colored-box style="--background-color:#C6E6F0"} -->
-<!-- ::: {.centered} -->
-<!-- **Mission Areas** -->
-<!-- ::: -->
+Fast forward a few years and I landed a job as a research associate in the Ocean Observation Laboratory at the University of Massachusetts Dartmouth :next_track_button:
+:::
 
-<!-- :fish: Sustainable Fisheries   -->
-<!-- :tropical_fish: Population and Ecosystems Monitoring   -->
-<!-- :computer: Operations, Management, and Information   -->
-<!-- :turtle: Marine Mammals and Sea Turtles     -->
-<!-- :chart_with_upwards_trend: Fisheries Statistics   -->
-<!-- :camera: Fisheries Assessment, Technology, and Engineering Support   -->
+<!-- ---------------------------------------------------------------------- -->
 
-<!-- ::: -->
-<!-- :::: -->
-<!-- ::::: -->
+## {background-iframe="https://www.youtube.com/embed/aRyEDzaogPc?mute=1&autoplay=1" background-interactive="true" background-size="contain"  data-menu-title="SMAST"}
 
-<!-- # Artificial Intelligence (AI) and Machine Learning (ML) at the Southeast Fisheries Science Center {.divider} -->
+::: {.notes}
+They needed someone to, among other things, manage their glider program. This is a video of a glider in their large acoustic test tank where I'd ballast and test it before deploying. I was the only applicant who had that training and experience, I later found out. My Master's degree did not get me that job -- in fact, it was advertised as "Bachelor's required, Master's preferred" -- those glider piloting skills got me the job. :next_track_button:
+:::
 
-<!-- ## Fish Ageing {.content-double-swoop auto-animate="true"} -->
+<!-- ---------------------------------------------------------------------- -->
 
-<!-- ::: {.fragment} -->
-<!-- But first, why age a fish? Who cares?   -->
-<!-- ::: -->
+## {background-image="images/gom_front_ws.jpg" fig-alt="Ocean front photographed from the bridge of the R/V Walton Smith" data-menu-title="RSMAS | PhD"}
 
-<!-- <br> -->
+::: {.smallest style="color: white;" .absolute bottom="5" right="0"}
+Photo credit: Tamay &Ouml;zg&ouml;kmen
+:::
 
-<!-- ::: {.fragment} -->
-<!-- :fish: **Fish age** is combined with **length measurements** to estimate **growth rates.**   -->
-<!-- ::: -->
+::: {.notes}
+I did that for a couple years before deciding to back to school for my Ph.D. at the University of Miami with Dr. Tamay Ozgokmen. He's an interesting character himself: he spent the first decade of his career as an ocean modeler and made fun of sea-going oceanographers who got sea sick collecting small amounts of data. He was convinced that he could learn more about the ocean from the comfort of his office using circulation models. Then the Deepwater Horizon oil spill happened and he quickly learned that even the best circulation models failed to predict where the oil would go. So he then spent the next decade of his career conducting large scale field campaigns in the Gulf to better understand the material transport problem. :next_track_button:
+:::
 
-<!-- <br> -->
+<!-- ---------------------------------------------------------------------- -->
 
-<!-- ::: {.fragment} -->
-<!-- Knowing fish age enables us to: -->
+## {background-iframe="https://player.vimeo.com/video/228250408?h=04a07d052e?autoplay=0" background-interactive="true"  background-size="contain" data-menu-title="CARTHE Overiew"}
 
-<!-- ::: {.small} -->
-<!-- * Estimate fish mortality rate from year to year -->
-<!-- * Determine reproductive maturity of the fish -->
-<!-- * Monitor changes in stock population over time -->
-<!-- ::: -->
-<!-- ::: -->
+::: {.smallest style="color: white;" .absolute bottom="5" right="0"}
+Video courtesy of the Consortium for Advanced Research on Transport of Hydrocarbon in the Environment at the University of Miami.
+:::
 
+::: {.notes}
+Here's one of the outreach videos that we used to explain our work to the general public. 
 
-<!-- ## Fish Ageing {.content-double-swoop auto-animate="true"} -->
+So that's where I came in. Tamay needed someone to dig into those data to help pioneer the "next generation of ocean circulation models." So, he brought me on as a Ph.D. student because of my experience gathering and analyzing oceanographic data and gave me considerable freedom to define my own research problem, which was a rather unique, though also daunting, experience. Meanwhile, he had become intrigued by machine learning and how it might become the future of oceanographic modeling, like it has in so many other fields :next_track_button:
+:::
 
-<!-- :::: {.columns} -->
-<!-- ::: {.column} -->
-<!-- ![Catching all fish is impractical...](./images/red-snapper-school.png) -->
-<!-- ::: -->
+<!-- ---------------------------------------------------------------------- -->
 
-<!-- ::: {.column .fragment} -->
-<!-- ![...so we subsample...](./images/red-snapper-subset.png) -->
-<!-- ::: -->
-<!-- :::: -->
+## Lagrangian trajectory prediction {background-image="images/GLAD_animation.gif" data-menu-title="Drifter prediction" data-menu-title="SEFSC"}
 
-<!-- ## Fish Ageing {.content-double-swoop auto-animate="true"} -->
+::: {.notes}
+I decided to make my dissertation research about testing machine learning with the drifter data from the large scale field experiments in that video. The biggest barrier to marine science adaptation of machine learning has been and largely continues to be the availability of - or, more accurately, the lack thereof - data. As you know, machine learning models are data hungry. That's the whole premise behind them. So, our thinking was, if machine learning is going to work anywhere in the ocean circulation problem, hopefully it'll work in this rare case of having over 5 million data points from a single type of instrument (drifters). I don't have time tonight to go into detail about that work, but I came out of that program as an observational physical oceanographer with machine learning experience, a unique combination of skills that, at the time, turned out to be quite marketable, because I finally landed my first NOAA job offer as I was finishing up my Ph.D. I later learned that my first supervisor liked my machine learning experience because they needed that expertise in house, but also liked my past observational oceanography experience because it showed that I understood not just the data themselves, but how the data are collected and all the complexities and complications that go with that. :next_track_button:
+:::
 
-<!-- ::: {.centered} -->
-<!-- ![...and calculate relative abundances for each age.](./images/fake-age-histogram.png){width=80%} -->
-<!-- ::: -->
+# {.content-swoop auto-animate="true"}
 
-<!-- ## Red Snapper Ageing {.content-double-swoop auto-animate="true"} -->
+The NOAA **Southeast Fisheries Science Center** (SEFSC) provides the scientific advice and data needed to effectively manage the living marine resources of the Southeast region and Atlantic high seas.
 
-<!-- ![](images/otoliths.jpg) -->
+:::: columns
+::: {.column width="60%"}
+![](images/sefsc_map_500x500.png)
+:::
 
+:::: {.column .smallest width="40%"}
+::: {.colored-box style="--background-color:#C6E6F0"}
+::: {.centered}
+**Mission Areas**
+:::
 
-<!-- ## Red Snapper Ageing {.content-double-swoop auto-animate="true"} -->
+:fish: Sustainable Fisheries  
+:tropical_fish: Population and Ecosystems Monitoring  
+:computer: Operations, Management, and Information  
+:turtle: Marine Mammals and Sea Turtles    
+:chart_with_upwards_trend: Fisheries Statistics  
+:camera: Fisheries Assessment, Technology, and Engineering Support  
 
-<!-- ::: {.centered} -->
+:::
+::::
+:::::
 
-<!-- ![](images/otolith-redsnapper.jpg) -->
+::: {.notes}
+So now, here am I, one who avoided all things biology in school, working at, of all places, at the Southeast Fisheries Science Center I work with amazingly passionate and dedicated scientists, such as my colleague who retired this month after a remarkable 41 years of service during which he contributed to nearly every survey and shipboard research project based out of his lab and logged nearly 120 sea days this year alone before retiring. We are all distributed across a number of labs and facilities from Texas though the Caribbean and up to North Carolina, where I'm located, and we carry out an inspiring and motivating mission of *providing the scientific advice and data needed to effectively manage the living resources of the Southeast Region and Atlantic high seas.* We do this by partnering with fisheries management councils, fisheries commissions, and federal, state, and local agencies to, among many other things, carry out annual stock assessments for key species throughout the region. These assessments are always rooted in independent, objective science and contain such information as population estimates (counts), spatial distributions, age distributions, and the overall health of the particular species. This kind of information is then used to inform consequential policy decisions such as where can people fish and when, how much of each species can be kept, and things like that.
 
+I'm a data scientist now, which means I'm not technically doing oceanography, but I'm solving technical problems related to the ocean, which I enjoy. My job is to collaborate with scientists all across the Center to understand the ways in which we are collecting data, processing it, and converting into useful information, and then find ways to streamline, modernize, and automate our workflows where possible. I personally have come to really enjoy automating things, even outside of work. It's just...oddly satisfying!  So my team and I are identifying parts of our mission that could be well-suited for machine learning and automation so that our limited staff and funding can be allocated to tasks that machines are not good at. :next_track_button:
+:::
 
-<!-- ![](images/otolith-agemarks.jpg){.fragment} -->
+<!-- ---------------------------------------------------------------------- -->
 
-<!-- ::: -->
+# Reef Fish Surveys: <br> What's where, when, and why? {.divider data-menu-title="Reef Fish Surveys"}
 
-<!-- ## Red Snapper Ageing {.content-double-swoop auto-animate="true"} -->
+::: {.notes}
+For example, one way we improve stock assessments is by observing fish habitats and water quality to derive estimates of abundance, size, and community composition for key species in the region. :next_track_button:
+:::
 
-<!-- ![](images/otolith-ageing-current-workflow.jpg){width=90%} -->
+<!-- ---------------------------------------------------------------------- -->
 
-<!-- ::: {.fragment .small} -->
-<!-- :date: **50-70 days (10-15 weeks)** of human hours to age 1000 otoliths, not including prep.   -->
-<!-- ::: -->
+## {background-iframe="https://players.brightcove.net/659677166001/4b3c8a9e-7bf7-43dd-b693-2614cc1ed6b7_default/index.html?videoId=6376453872112&autoplay=true&muted" data-menu-title="GFISHER"}
 
-<!-- ::: {.fragment .small} -->
-<!-- :dizzy_face: But we receive thousands of samples every year! **Is there a better way?** -->
-<!-- ::: -->
+::: {.notes}
+We do this by deploying cameras underwater and recording fish in their natural habitat. We use a system of 4-5 outward-looking cameras to get a 360&deg; view, mount them into a protective cage along with other oceanographic instruments for measuring oceanographic data, and lower it off the ship to record 20–30-minute videos at roughly 2000 randomly selected locations throughout the region each year. As you might expect, this results in many terabytes of video data that need to be processed. The traditional method is for expert scientists to sit in dark rooms and watch the videos all day every day to find, identify, and count fish species on each frame in each video. It's a very time-consuming process, and it currently takes us more than a year to process one year's worth of video. So obviously that's not sustainable; we can't keep up! So, this has become one candidate for machine learning since the rise of high performing computer vision models. We're currently deploying models that identify key species of fish in the videos and track them from frame to frame so that we can quickly get estimates of how many of each species are present, which we anticipate will shave off many months of processing time. But this is not without its challenges: visibility underwater changes from site to site, day to day, which can make some of the videos very difficult if not impossible to process. We also have a highly unbalanced data set, with some species being seen very often and others very rarely. So there is always room for more data and ongoing research and development as the machine learning field rapidly advances. :next_track_button:
+:::
 
-## Red Snapper Ageing {.content-double-swoop auto-animate="true"}
+<!-- ---------------------------------------------------------------------- -->
 
-#### Can we use spectrometry to reliably estimate age?
+# Life History Assessment: <br> Fish Ageing {.divider data-menu-title="Life History"}
 
-![](images/spectra-by-age.jpg)
+::: {.notes}
+Species counts is only one metric for habitat monitoring. We also need to know the age distribution of those species because... :next_track_button:
+:::
 
-## Red Snapper Ageing {.content-double-swoop auto-animate="true"}
+<!-- ---------------------------------------------------------------------- -->
 
+## {.content-swoop auto-animate="true" data-menu-title="Fish Ageing"}
+
+#### But first, why age a fish? Who cares? 
+
+::: {.centered}
+![:fish: **Fish age** is combined with **length measurements** <br> to estimate **growth rates** and **relative abundances**.](./images/fake-age-histogram.png){width=80%}
+:::
+
+::: {.notes}
+...this allows us to estimate fish mortality rate from year to year, to determine reproductive maturity of the stock, and to monitor changes in population over time. If, for example, the vast majority of individuals in a given year are juvenile, it would be in our best management interest to limit fishing of that species so that those juveniles can grow and reproduce, lest we fish them out of existence. On the other hand, if all of the individuals are older or...shall we say, elderly fish...we know something is wrong that is either preventing reproduction or affecting the survival rate of young. So each year scientists collect samples of key species to be aged at a lab. Some species, like Atlantic and Gulf menhaden, are aged by looking at a scale under a microscope... :next_track_button:
+:::
+
+<!-- ---------------------------------------------------------------------- -->
+
+## Otolith Ageing {.content-swoop auto-animate="true" data-menu-title="Otoliths"}
+
+![](images/otoliths.jpg)
+
+::: {.notes}
+...while other species are aged using an otolith, a small ear bone that grows as the fish grows. :next_track_button:
+:::
+
+<!-- ---------------------------------------------------------------------- -->
+
+## {.content-swoop auto-animate="true" data-menu-title="Otolith Ageing"}
+
+![**Growth rings** accumulate every year, providing a means for estimating fish age.](images/otolith-agemarks.jpg)  
+
+<br>
+
+::: {.small}
+:date: **50-70 days (10-15 weeks)** of human hours to age 1000 otoliths, not including prep.  
+
+:dizzy_face: But we receive thousands of samples every year! **Is there a better way?**
+:::
+
+::: {.notes}
+In both cases, scientists look for and count rings or similar signals, much like counting tree rings. :next_track_button:
+:::
+
+<!-- ---------------------------------------------------------------------- -->
+
+## {.content-swoop auto-animate="true" data-menu-title="Automated Ageing"}
+
+#### Aging from spectrometry
+
+::: {.centered}
+![](images/spectra-by-age.jpg){width=80%}
+:::
+
+<!-- 
 ```{mermaid}
 flowchart LR
   A[<img src="images/otolith-tray.png"> Otolith samples] --> B(<img src="images/spectrometer.png"> Spectrometer)
@@ -223,11 +289,7 @@ flowchart LR
   E --> F
 ```
 
-::: {.fragment}
-
----
-
-### New Method
+ -->
 
 ```{mermaid}
 flowchart LR
@@ -237,294 +299,211 @@ flowchart LR
   D --> E(<img src="images/fake-age-histogram.png"> Ages provided<br>to end users)
 ```
 
+::: {.notes}
+Again, this has traditionally been done by humans, but we have trained computer vision and statistical models for a few initial species that can do much of this for us in a fraction of the time. :next_track_button:
 :::
+
+<!-- ---------------------------------------------------------------------- -->
+
+# {.content-swoop auto-animate="true" data-menu-title="NOAA Mission Areas"}
+
+![](images/noaa-mission.jpg)
+
+::: {.notes}
+There are numerous other examples of exciting and promising work like this all throughout the agency. I really see this kind of innovation, along with cloud adaptation and the rise of uncrewed systems for data collection across all of NOAA's mission, as being areas of substantial growth in the years to come. But of course the commitment to other research and operational science will always be there too. NOAA's mission spans from the surface of the sun to the sea floor, and we do everything from research and science to policy and governance to education and outreach, all of which require a highly diverse workforce of domain scientists, communicators, lawyers, policy makers, law enforcement, budget folks, facilities support, IT, just to name a few...there is literally something for everyone. :next_track_button:
+:::
+
+<!-- ---------------------------------------------------------------------- -->
+
+# Navigating government jobs {.divider}
+
+::: {.notes}
+Ok, so what if you're interested in working for NOAA or another federal agency; how does one make that happen? I'll offer a few ideas to conclude. First, I'll return to my former advisor's advice: start looking for government jobs and take note of what skills they require. For federal positions, specialized skills and experience are absolutely essential to qualifying for any job. Much more so than the private sector. So, start looking now, no matter what year you're in. It's never too early to figure out what skills to develop before you need them. :next_track_button:
+:::
+
+<!-- ---------------------------------------------------------------------- -->
+
+## {background-image="images/usajobs_screenshot.png" auto-animate="true" data-menu-title="USAJOBS"}
+
+::: {.absolute top="85%" left="65%" style="padding: 5px; background: rgba(255, 255, 255, 0.8); border-radius: 5px; border: 1px solid #ccc;"}
+[View Live Site ↗](https://www.usajobs.gov){target="_blank"}
+:::
+
+[ ](https://www.usajobs.gov){.absolute top=0 left=0 width="100%" height="100%"}
+
+::: {.notes}
+The vast majority of federal jobs are posted on USAJOBS and every job will have a Qualifications section that describes the specialized experience you need to qualify. That could be a whole different seminar so I won't go into details today. :next_track_button:
+:::
+
+<!-- ---------------------------------------------------------------------- -->
+
+## {.content-swoop auto-animate="true" data-menu-title="Sample JOAs"}
+
+![Some recent examples:](images/usajobs_search_screenshot.png)
+
+- [Meteorologist](https://www.usajobs.gov/job/854675700)
+- [Meteorological Technician](https://www.usajobs.gov/job/860740400)
+- [Research Physical Scientist](https://www.usajobs.gov/job/861651700)
+
+::: {.notes}
+I did pull a few relevant examples that we can look at afterwards if there's time and interest, but the links are here regardless. :next_track_button:
+:::
+
+<!-- ---------------------------------------------------------------------- -->
+
+## {.content-swoop auto-animate="true" data-menu-title="Affiliates"}
+
+[Cooperative Institutes](https://ci.noaa.gov/) (CI)
+
+:::: {.columns2}
+::: {.column}
+![](https://ci.noaa.gov/wp-content/uploads/2023/10/CI-Map-Oct-2023-1024x535.png)
+:::
+::: {.column}
+![](images/ci_job_sample.png)
+:::
+::::
+
+Government Contractors
+
+:::: {.columns2}
+::: {.column .small}
+- Support specific projects
+- Usually fills gaps in specialized skill sets
+- Often 1-3 years at a time, but duration varies
+:::
+::: {.column}
+![](images/noaa_contractor_sample.png)
+:::
+::::
+
+::: {.callout-note title="Disclaimer" .small}
+These screenshots are randomly selected samples. Inclusion here does not constitute an endorsement of any of job or employer.
+:::
+
 <br>
 
-## YAML keys {.content-double-swoop auto-animate="true"}
-
-``` {.yaml code-line-numbers="7-8"}
-title: NOAA Fisheries revealjs Presentation Template
-subtitle: Using quarto to build a branded slide presentation
-author: John Doe 
-institute: NMFS Open Science
-date: last-modified
-brand: slides-light-brand.yml
-format:
-  nmfs-slides-revealjs: 
-```
-
-`format`: where we add the `nmfs-slides-revealjs` extension
-
-## YAML keys {.content-double-swoop auto-animate="true"}
-
-``` {.yaml code-line-numbers="9-11"}
-title: NOAA Fisheries revealjs Presentation Template
-subtitle: Using quarto to build a branded slide presentation
-author: John Doe 
-institute: NMFS Open Science
-date: last-modified
-brand: slides-light-brand.yml
-format:
-  nmfs-slides-revealjs: 
-      title-slide-attributes:
-        data-background-image: "styles/horiz-swoop-1.png, images/background.jpg"
-        data-background-color: '{{{< brand color dark-blue >}}}'
-```
-
-`title-slide-attributes`: place to change background image and color just on the title slide
-
-## YAML keys {.content-double-swoop auto-animate="true"}
-
-``` {.yaml code-line-numbers="12"}
-title: NOAA Fisheries revealjs Presentation Template
-subtitle: Using quarto to build a branded slide presentation
-author: John Doe 
-institute: NMFS Open Science
-date: last-modified
-brand: slides-light-brand.yml
-format:
-  nmfs-slides-revealjs: 
-      title-slide-attributes:
-        data-background-image: "styles/horiz-swoop-1.png, images/background.jpg"
-        data-background-color: '{{{< brand color dark-blue >}}}'
-      footer: "U.S. Department of Commerce | National Oceanic and Atmospheric Administration | National Marine Fisheries Service"
-```
-
-`footer`: standard NOAA Fisheries footer, shown on every slide except title slide
-
-## YAML keys {.content-double-swoop auto-animate="true"}
-
-``` {.yaml code-line-numbers="13"}
-title: NOAA Fisheries revealjs Presentation Template
-subtitle: Using quarto to build a branded slide presentation
-author: John Doe 
-institute: NMFS Open Science
-date: last-modified
-brand: slides-light-brand.yml
-format:
-  nmfs-slides-revealjs: 
-      title-slide-attributes:
-        data-background-image: "styles/horiz-swoop-1.png, images/background.jpg"
-        data-background-color: '{{{< brand color dark-blue >}}}'
-      footer: "U.S. Department of Commerce | National Oceanic and Atmospheric Administration | National Marine Fisheries Service"
-      controls: true
-```
-
-`controls`: defaults to true; adds arrow buttons at edges of slides
-
-## YAML keys {.content-double-swoop auto-animate="true"}
-
-``` {.yaml code-line-numbers="14"}
-title: NOAA Fisheries revealjs Presentation Template
-subtitle: Using quarto to build a branded slide presentation
-author: John Doe 
-institute: NMFS Open Science
-date: last-modified
-brand: slides-light-brand.yml
-format:
-  nmfs-slides-revealjs: 
-      title-slide-attributes:
-        data-background-image: "styles/horiz-swoop-1.png, images/background.jpg"
-        data-background-color: '{{{< brand color dark-blue >}}}'
-      footer: "U.S. Department of Commerce | National Oceanic and Atmospheric Administration | National Marine Fisheries Service"
-      controls: true
-      navigation-mode: linear
-```
-
-`navigation-mode`: `linear`, `vertical`, or `grid`, controls arrow key behavior
-
-## YAML keys {.content-double-swoop auto-animate="true"}
-
-``` {.yaml code-line-numbers="15-16"}
-title: NOAA Fisheries revealjs Presentation Template
-subtitle: Using quarto to build a branded slide presentation
-author: John Doe 
-institute: NMFS Open Science
-date: last-modified
-brand: slides-light-brand.yml
-format:
-  nmfs-slides-revealjs: 
-      title-slide-attributes:
-        data-background-image: "styles/horiz-swoop-1.png, images/background.jpg"
-        data-background-color: '{{{< brand color dark-blue >}}}'
-      footer: "U.S. Department of Commerce | National Oceanic and Atmospheric Administration | National Marine Fisheries Service"
-      controls: true
-      navigation-mode: linear
-      transition: slide
-      transition-speed: default
-```
-
-`transition`: control transitions between slides and animation speed
-
-## YAML keys {.content-double-swoop auto-animate="true"}
-
-``` {.yaml code-line-numbers="17"}
-title: NOAA Fisheries revealjs Presentation Template
-subtitle: Using quarto to build a branded slide presentation
-author: John Doe 
-institute: NMFS Open Science
-date: last-modified
-brand: slides-light-brand.yml
-format:
-  nmfs-slides-revealjs: 
-      title-slide-attributes:
-        data-background-image: "styles/horiz-swoop-1.png, images/background.jpg"
-        data-background-color: '{{{< brand color dark-blue >}}}'
-      footer: "U.S. Department of Commerce | National Oceanic and Atmospheric Administration | National Marine Fisheries Service"
-      controls: true
-      navigation-mode: linear
-      transition: slide
-      transition-speed: default
-      background-transition: none
-```
-
-`background-transition`: separately control background transitions
-
-## YAML keys {.content-double-swoop auto-animate="true"}
-
-``` {.yaml code-line-numbers="18"}
-title: NOAA Fisheries revealjs Presentation Template
-subtitle: Using quarto to build a branded slide presentation
-author: John Doe 
-institute: NMFS Open Science
-date: last-modified
-brand: slides-light-brand.yml
-format:
-  nmfs-slides-revealjs: 
-      title-slide-attributes:
-        data-background-image: "styles/horiz-swoop-1.png, images/background.jpg"
-        data-background-color: '{{{< brand color dark-blue >}}}'
-      footer: "U.S. Department of Commerce | National Oceanic and Atmospheric Administration | National Marine Fisheries Service"
-      controls: true
-      navigation-mode: linear
-      transition: slide
-      transition-speed: default
-      background-transition: none
-      scrollable: true
-```
-
-`scrollable`: enable scrolling on a slide when content overflows
-
-## Light and dark themes {.content-double-swoop}
-
-Two color schemes following NMFS branding guidelines
-
-::: {layout-ncol="2"}
-![`brand: slides-light-brand.yml`](images/light-brand.png)
-
-![`brand: slides-dark-brand.yml`](images/dark-brand.png)
+::: {.notes}
+Don't rule out government contractor jobs either, especially for non-citizens. Contractors and affiliate staff make up about half of our workforce at NOAA and are essential to carrying out our mission. We literally could not do it without them. These folks work for either private companies that usually exist solely for government contracts or at some universities throughout the country with whom we have cooperative agreements. These are called "cooperative institutes", there are about 15 of them I believe, each one specializing in and supporting a different part of NOAA's mission. There are advantages and disadvantages to both federal and contractor careers, but again, that could be a different seminar. Contractor positions will be advertised on their company or university sites, so you'll often find them on job platforms like LinkedIn or Indeed. :next_track_button:
 :::
 
-## Customizing the title slide {.content-double-swoop}
+<!-- ---------------------------------------------------------------------- -->
 
-Background and swoop types can be changed
+## {.content-swoop auto-animate="true" data-menu-title="NOAA Corps"}
 
-In the YAML header under `title-slide-attributes`:
+![](images/noaa_corps_screenshot.png)
 
--   `data-background-image` controls the swoop type and whether to include a background image
+[Learn more about the NOAA Commissioned Officer Corps](https://www.omao.noaa.gov/noaa-corps)
 
--   `data-background-color` controls the background color of the title slide if no background image is used
-
-## Customizing the title slide {.content-double-swoop}
-
-### Swoop type
-
-``` yaml
-data-background-image: "[Swoop Path]"
-```
-
-::: {layout-ncol="2"}
-![Horizontal (`styles/horiz-swoop-1.png`)](images/title-horiz-swoop.png){fig-align="left" width="90%"}
-
-![Vertical (`styles/vert-swoop-1.png`)](images/title-vert-swoop.png){fig-align="left" width="90%"}
+::: {.notes}
+I also invite you to check out the NOAA Corps, especially if things flying hurricane hunters and driving ships excites you. I honestly did not know about the NOAA Corps until later in my academic preparation, but that is such a unique opportunity, though certainly not for everyone. :next_track_button:
 :::
 
-## Customizing the title slide {.content-double-swoop}
+<!-- ---------------------------------------------------------------------- -->
 
-### Background image
+## Student Opportunities{.content-swoop auto-animate="true"}
 
-``` yaml
-data-background-image: "[Swoop Path], [Background Path]"
-data-background-image: "styles/horiz-swoop-1.png, styles/background.jpg"
-```
+![[NOAA: [https://www.noaa.gov/education/opportunities/students](https://www.noaa.gov/education/opportunities/students)]{.small}](images/noaa_internships_screenshot.png)
 
-![](images/title-background-image.png){fig-align="center"}
+![[Federal: [https://help.usajobs.gov/working-in-government/unique-hiring-paths/students](https://help.usajobs.gov/working-in-government/unique-hiring-paths/students)]{.small}](images/usajobs_internships_screenshot.png)
 
-## Customizing the title slide {.content-double-swoop}
-
-### Background image
-
-``` yaml
-data-background-image: "[Swoop Path], [Background Path]"
-data-background-color: "{{{< brand color dark-blue >}}}"
-```
-
-::: callout-important
-If using a background image that's different from your theme (i.e., dark background in light theme, light background in dark theme), make sure to also change the `data-background-color` field to match the background so Quarto knows to use a contrasting font color
+::: {.notes}
+NOAA also offers many opportunities for student internships for both undergraduate and graduate students. Just Google "NOAA internships" and you'll find a number of pages. Each line office generally handles these separately, so find the parts of NOAA that appeal to you and check them out. Some of these opportunities include Sea Grant internships, the William M. Lapenta Student Internship Program, and others. And I'll also point out, something I did not know until much later, that the federal government has different hiring paths, meaning different ways you can qualify for jobs. One of these is a "recent graduates" path, which allows us to post entry level jobs designed specifically for recent graduates, which usually means within 5 years of graduation. So, you can look for these specifically on USAJOBS; NOAA definitely uses them when we can, and many other agencies do as well. Feel free to reach out to NOAA staff; we're busy and get lots of emails every day, but the vast majority of folks will happily respond to student inquiries. You just need to be patient sometimes. :next_track_button:
 :::
 
-## Customizing the title slide {.content-double-swoop}
+<!-- ---------------------------------------------------------------------- -->
 
-### Background color
+# Science. Service. Stewardship. {.divider data-menu-title="Contact Info"}
 
-For [brand colors](_brand.yml) use `{{{< brand color [COLOR] >}}}`
+:::: {.columns2}
+::: {.column width=25%}
+![](_extensions/nmfs-opensci/nmfs-slides/_extensions/nmfs-opensci/nmfs-brand/logos/condensed-lockup-v.png){width=60%}
+:::
+::: {.column width=75% .smaller}
+**Matt Grossi**[, Ph.D.]{.small}  
+*Data Scientist*  
+Advanced Technology and Innovation Branch  
+NOAA Fisheries | Southeast Fisheries Science Center   
+matt.grossi@noaa.gov
+:::
+::::
 
-``` yaml
-data-background-color: "{{{< brand color [COLOR] >}}}"
-```
+::: {.notes}
+Here is my email address, so feel free to reach out to me any time if you have questions. I'll do my best to help.
 
-::: {layout-ncol="2"}
-![`{{{< brand color dark-blue >}}}`](images/title-blue.png){fig-align="left" width="85%"}
-
-![`{{{< brand color fisheries-teal >}}}`](images/title-teal.png){fig-align="left" width="85%"}
+I've enjoyed being with you all tonight, it's great to be back at Florida Tech, even if virtually! It's very hard to believe how many years have gone by since I last sat where you are, so enjoy your time and experience there. And no matter where you are in your academic preparation, or where you want to end up as a job or career, if you remember one thing from tonight, remember that skills get people jobs. Do well in your classes, yes, because you need to gain subject matter expertise, but use your time as a student wisely to learn as much as you can outside of the classroom. The fact that you're here this evening tells me you're on that right track already. It's an extracurricular activity that you're doing on your time, a professional organization that you're plugging into. You're inviting, listening to, and learning from speakers. You're curiously asking questions and proactively wanting to know about career options. This is all very good stuff, so I applaud you for that. Keep up the good work, and GO PANTHERS!
 :::
 
-# Content slides {.divider}
+<!-- ---------------------------------------------------------------------- -->
+<!-- EXTRA SLIDES                                                           -->
+<!-- ---------------------------------------------------------------------- -->
 
-## Content slides: no swoop
+# Extra Slides {.content-swoop visibility="uncounted"}
 
-Example slide for main content showcasing with no swoop on the footer
+## {auto-animate="true" visibility="uncounted" data-menu-title="Spherecam"}
 
-Note the small noaa logo
+![Custom "spherecam" devices provide a panoramic 360&deg; view underwater.](https://www.fisheries.noaa.gov/s3//styles/media_250_x_375/s3/2023-03/500x750-SEFSC-AIML-camera-360.jpg?itok=nP3gxtm9)
 
-## Content slides: swoop, no runner {.content-swoop}
+<!-- ---------------------------------------------------------------------- -->
 
-Example slide for main content showcasing NOAA's swoop in the footer
+## {auto-animate="true" visibility="uncounted" data-menu-title="Deployment"}
 
-Adds the `.content-swoop` class to the header
+![The spherecams are mounted inside cages alongside other oceanographic instrumentation for protection during deployment and recovery. The cage system is then lowered off the ship to the sea floor for 20-30 minutes at a time.](https://www.fisheries.noaa.gov/s3//2023-03/750x500-SEFSC-AIML-camera-deployment.jpg?itok=axnkutk8)
 
-## Content slides: swoop, teal runner {.content-swoop-teal}
+<!-- ---------------------------------------------------------------------- -->
 
-Example slide for main content showcasing NOAA's swoop in the footer with a teal runner
+## {transition="fade-in, slide-out" visibility="uncounted" data-menu-title="GFISHER Map"}
 
-Adds the `.content-swoop-teal` class to the header
+![Survey stations sampled from between 2020 and 2023 with symbols indicating the partner conducting the survey. For an interactive version of this map:](images/GFISHER-map-screenshot.png)
 
-## Content slides: swoop, navy runner {.content-swoop-navy}
+[Learn more about the NOAA RESTORE G-FISHER Program!](https://storymaps.arcgis.com/stories/58708cd2613b4c319f7fb5d98457dfbc)
 
-Example slide for main content showcasing NOAA's swoop in the footer with a navy runner
+<!-- ---------------------------------------------------------------------- -->
 
-Adds the `.content-swoop-navy` class to the header
+## {background-image="images/watercolumn.jpg" fig-alt="Underwater photo as sunlight filters through" visibility="uncounted" data-menu-title="Density Prediction"}
 
-## Content slides: double swoop {.content-double-swoop}
+<br><br><br><br>
 
-Example slide for main content showcasing NOAA's horizontally-oriented swoop footer
+[**Ocean density prediction**]{.largest style="color:white"}
 
-Adds the `.content-double-swoop` class to the header
+<!-- ---------------------------------------------------------------------- -->
 
-## Changing the background color of a single slide {.content-double-swoop background-color="#005E5E"}
+## {background-iframe="https://player.vimeo.com/video/257792941?h=27a0704d2d" visibility="uncounted" data-menu-title="CARTHE Background Story"}
 
-Add `{background-color=[ColorHexCode]}` to the slide header
-
-Heading and body text colors are changed to a contrasting color
-
-::: callout-note
-Brand color names are currently not supported in slide attributes. Reference [\_brand.yml](_brand.yml) for brand color hex codes.
+::: {.smallest style="color: white;" .absolute bottom="5" right="0"}
+Video courtesy of the University of Miami and the Consortium for Advanced Research on Transport of Hydrocarbon in the Environment (CARTHE)
 :::
 
-# Divider slides {.divider}
+<!-- ---------------------------------------------------------------------- -->
 
-Used to divide sections
+## {background-image="https://images.marinetechnologynews.com/images/maritime/w800h500/carthe-drifter-78767.jpg" background-size="contain" visibility="uncounted" data-menu-title="Drifter"}
 
-Denoted by a first-level heading (`# Heading`)
+<!-- ---------------------------------------------------------------------- -->
 
-Adding the `.divider` class to the header adds the left and right swoops
+## {background-image="https://images.marinetechnologynews.com/images/maritime/drifter-getting-78764.jpg" background-size="contain" visibility="uncounted" data-menu-title="Drifters on WS"}
+
+<!-- ---------------------------------------------------------------------- -->
+
+## {background-image="https://images.marinetechnologynews.com/images/maritime/w800h500/threemonth-trajectories-78766.jpg" background-size="contain" visibility="uncounted" data-menu-title="Three-month Trajectories"}
+
+<!-- ---------------------------------------------------------------------- -->
+
+## {.content-swoop transition="slide-in fade-out" visibility="uncounted" data-menu-title="Artificial Neural Net"}
+
+![](images/fig_nnet.png)
+
+<!-- ---------------------------------------------------------------------- -->
+
+## {.content-swoop transition="fade-in fade-out" visibility="uncounted" data-menu-title="Star Eddy Simulation"}
+
+![](images/HYCOM_advection_gridNorth.gif)
+
+<!-- ---------------------------------------------------------------------- -->
+
+## {.content-swoop transition="fade-in slide-out" visibility="uncounted" data-menu-title="Star Eddy Results"}
+
+![](images/fig_eddy_forecasterror.png)
+
+<!-- ---------------------------------------------------------------------- -->
+
+# {background-color="black" visibility="uncounted" data-menu-title="END"}
