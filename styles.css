@@ -19,6 +19,10 @@
   text-align: center;
 }
 
+.flushright {
+   text-align: right !important;
+}
+
 .smaller {
   font-size: 80%;
 }
@@ -29,6 +33,18 @@
 
 .smallest {
   font-size: 55%;
+}
+
+.larger {
+  font-size: 120%
+}
+
+.large{
+  font-size: 140%
+}
+
+.largest{
+  font-size: 145%
 }
 
 .container{
@@ -53,4 +69,30 @@
 :root {
   --mermaid-node-bg-color: #FFFFFF;
   --mermaid-node-fg-color: #FFFFFF;
+}
+
+.nobullets li {
+  list-style-type: none;
+}
+
+.semi-transparent-box {
+  background-color: rgba(255, 255, 255, 0.9); /* Black with 60% opacity */
+  color: #fff; /* White text */
+  padding: 25px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the box */
+  width: 80%;
+}
+
+.dark-box {
+  background-color: rgba(232, 232, 232, 0.75); /* Black with 75% opacity */
+  color: #222;                                  /* Dark text */
+  padding: 0em;
+  border-radius: 12px;
+  height: 80%;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);       /* Optional: adds depth */
 }
